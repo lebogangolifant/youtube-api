@@ -54,7 +54,7 @@ const App = () => {
 };
 
 export default App;
-
+require('dotenv').config();
 async function searchYouTube(q) {
   q = encodeURIComponent(q);
   const response = await fetch(
