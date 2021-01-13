@@ -14,14 +14,18 @@ const App = () => {
 
   return (
     <div className='app'>
-      <h1>SEARCH YOUTUBE VIDEO BY TOPIC</h1>
+      <h1>Search for YouTube videos by Topic</h1>
+      <p>
+        source code available on
+        <a href='https://github.com/lebogangolifant/youtube-api/'> GitHub</a>
+      </p>
       <form onSubmit={search}>
         <input
           autoFocus
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
-        <button>Search YouTube</button>
+        <button>Results</button>
       </form>
       {list &&
         (list.length === 0 ? (
@@ -31,7 +35,7 @@ const App = () => {
             {list.map((item) => (
               <li className='item' key={item.id}>
                 <div>
-                  <b>
+                  <b ClassName='title'>
                     <a href={item.link}>{item.title}</a>
                   </b>
                   <p>{item.description}</p>

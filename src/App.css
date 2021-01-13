@@ -1,19 +1,33 @@
 body {
-  background: #fff;
+  background: #000;
+  margin: 0 auto;
 }
 
 h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.8em;
+  font-size: 1.2em;
+  color: #fff;
+}
+p {
+  color: #fff;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #df073d;
+}
+a:hover{
+  color: #555;
 }
 
 .app {
   width: 36em;
-  margin: 3em;
+  margin: 0 auto;
+  text-align: center;
 }
 
 form {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 1em;
@@ -21,7 +35,7 @@ form {
 }
 
 button {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background: #df073d;
   color: #fff;
   font: inherit;
@@ -33,17 +47,19 @@ button {
 button:active { background-color: #da3a6a; }
 
 input {
-  border: 1px solid #999;
+  border: 1px solid #da3a6a;
   border-radius: 3px;
   font: inherit;
+  color: #999;
   padding: 0.5em;
   outline: none;
 }
-input:focus { outline: auto #df073d; }
+input:focus { outline: auto #df073db6; }
 
 ul {
   list-style-type: none;
   padding-left: 0;
+  margin: auto;
 }
 
 .items {
@@ -53,6 +69,8 @@ ul {
 
 .item {
   background: #fff;
+  text-align: left;
+  width: 40em;
   padding: 1em;
   border-radius: 6px;
   box-shadow: 0px 1px 6px 2px #0002;
@@ -69,6 +87,10 @@ ul {
 .item img { grid-area: i; }
 .item ul  { grid-area: m; }
 
+.item p {
+  color: #000;
+}
+
 .meta {
   display: grid;
   grid-auto-flow: column;
@@ -78,18 +100,38 @@ ul {
   color: #555;
 }
 
+img {
+  width: 25em;
+}
+
 @media (max-width: 600px) {
  h1 {
    font-size: 1.8vh;
  }
  .app {
-  width: 36vh;
-  margin: 0 auto;
+    width: 17em;
+    margin: 0;
+    text-align: center;
 }
 input, button {
   font-size: 11px;
 }
 button {
   font-size: 11px;
+}
+ul {
+  list-style-type: none;
+  padding-right: 12em;
+  margin: auto;
+}
+.meta {
+  font-size: 50%;
+  padding: 0;
+}
+.item {
+  width: 20em;
+}
+img {
+  width:5em ;
 }
 }
